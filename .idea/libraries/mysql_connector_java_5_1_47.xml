@@ -1,0 +1,22 @@
+<component name="libraryTable">
+  <library name="mysql-connector-java-5.1.47">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Desktop/SCAEK_Projet/Bibs/mysql-connector-java-5.1.47/mysql-connector-java-5.1.47.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/SCAEK_Projet/Bibs/mysql-connector-java-5.1.47/mysql-connector-java-5.1.47-bin.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/SCAEK_Projet/Bibs/mysql-connector-java-5.1.47/src/lib/slf4j-api-1.6.1.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/SCAEK_Projet/Bibs/mysql-connector-java-5.1.47/src/lib/jboss-common-jdbc-wrapper.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/SCAEK_Projet/Bibs/mysql-connector-java-5.1.47/src/lib/c3p0-0.9.1-pre6.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/Desktop/SCAEK_Projet/Bibs/mysql-connector-java-5.1.47/src/lib/c3p0-0.9.1-pre6.src.zip!/c3p0-0.9.1-pre6.src/dbms/oracle-thin/build/apidocs" />
+      <root url="jar://$USER_HOME$/Desktop/SCAEK_Projet/Bibs/mysql-connector-java-5.1.47/src/lib/c3p0-0.9.1-pre6.src.zip!/c3p0-0.9.1-pre6.src/dbms/oracle-thin/dist/doc/apidocs-oracle-thin" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/Desktop/SCAEK_Projet/Bibs/mysql-connector-java-5.1.47/src/lib/jboss-common-jdbc-wrapper-src.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/SCAEK_Projet/Bibs/mysql-connector-java-5.1.47/src/lib/c3p0-0.9.1-pre6.src.zip!/c3p0-0.9.1-pre6.src/dbms/oracle-thin/src/classes" />
+      <root url="jar://$USER_HOME$/Desktop/SCAEK_Projet/Bibs/mysql-connector-java-5.1.47/src/lib/c3p0-0.9.1-pre6.src.zip!/c3p0-0.9.1-pre6.src/relproj/debuggen/src/classes" />
+      <root url="jar://$USER_HOME$/Desktop/SCAEK_Projet/Bibs/mysql-connector-java-5.1.47/src/lib/c3p0-0.9.1-pre6.src.zip!/c3p0-0.9.1-pre6.src/src/classes" />
+      <root url="jar://$USER_HOME$/Desktop/SCAEK_Projet/Bibs/mysql-connector-java-5.1.47/src/lib/c3p0-0.9.1-pre6.src.zip!/c3p0-0.9.1-pre6.src/src/dist-static/examples" />
+    </SOURCES>
+  </library>
+</component>

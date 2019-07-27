@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" stylesheets="@../Res/styles/loginstyle.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.LoginController">
+   <children>
+      <VBox id="leftBox" alignment="TOP_CENTER" prefHeight="500.0" prefWidth="300.0" stylesheets="@../Res/styles/loginstyle.css">
+         <children>
+            <Label text="Société des Ciments de Ain El Kebira " textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="S.C.A.E.K" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="140.0" fitWidth="219.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Res/images/logoWhite.png" />
+               </image>
+               <VBox.margin>
+                  <Insets top="90.0" />
+               </VBox.margin>
+            </ImageView>
+            <Hyperlink accessibleHelp="https://www.gica.dz" accessibleRoleDescription="https://www.gica.dz" accessibleText="https://www.gica.dz" ellipsisString="https://www.gica.dz" text="www.gica.dz" textFill="WHITE" visited="true">
+               <VBox.margin>
+                  <Insets top="150.0" />
+               </VBox.margin>
+            </Hyperlink>
+            <Label text="Ouled-Adouane B.P N° 01 " textFill="WHITE" />
+            <Label text="Ain-El-Kebira (19400) - Sétif - Algérie" textFill="WHITE" />
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" fillWidth="false" maxHeight="500.0" maxWidth="400.0" minHeight="500.0" minWidth="400.0" prefHeight="500.0" prefWidth="400.0">
+         <children>
+            <HBox alignment="TOP_RIGHT" prefHeight="76.0" prefWidth="374.0">
+               <children>
+                  <JFXButton ellipsisString="" onAction="#closeStage" style="-fx-background-color: transparent;" text=" ">
+                     <graphic>
+                        <FontAwesomeIconView fill="#002171" glyphName="REMOVE" size="35" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <ImageView fitHeight="79.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Res/images/logo.png" />
+               </image>
+               <VBox.margin>
+                  <Insets bottom="40.0" top="20.0" />
+               </VBox.margin>
+            </ImageView>
+            <HBox alignment="TOP_CENTER" prefHeight="42.0" prefWidth="200.0" spacing="20.0">
+               <children>
+                  <MaterialDesignIconView glyphName="ACCOUNT_OUTLINE" size="30" />
+                  <StackPane maxHeight="25.0" maxWidth="135.0" minHeight="25.0" minWidth="135.0" prefHeight="25.0" prefWidth="135.0">
+                     <children>
+                        <JFXTextField fx:id="usernameField" onKeyPressed="#enterPressed" promptText="Nom d'utilisateur" />
+                     </children>
+                  </StackPane>
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="39.0" prefWidth="185.0" spacing="20.0">
+               <children>
+                  <MaterialDesignIconView glyphName="LOCK_OUTLINE" size="30" />
+                  <StackPane maxHeight="25.0" maxWidth="135.0" minHeight="25.0" minWidth="135.0" prefHeight="25.0" prefWidth="135.0">
+                     <children>
+                        <JFXTextField fx:id="passwordFieldShown" onKeyPressed="#enterPressed" promptText="mot de passe" />
+                        <JFXPasswordField fx:id="passwordField" onKeyPressed="#enterPressed" promptText="mot de passe" />
+                     </children>
+                  </StackPane>
+               </children>
+            </HBox>
+            <Label fx:id="echecLabal" textFill="#f55353">
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <HBox alignment="TOP_CENTER" prefHeight="58.0" prefWidth="200.0">
+               <children>
+                  <JFXCheckBox fx:id="checkpassword" checkedColor="#0d47a1" onAction="#checkPassword" text="Afficher le mot de passe" />
+               </children>
+            </HBox>
+            <JFXButton fx:id="connect" mnemonicParsing="false" onAction="#connecter" prefHeight="42.0" prefWidth="128.0" stylesheets="@../Res/styles/loginstyle.css" text="Connecter" textFill="WHITE">
+               <font>
+                  <Font name="Material Design Icons" size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="50.0" />
+               </VBox.margin>
+            </JFXButton>
+         </children>
+      </VBox>
+   </children>
+</HBox>

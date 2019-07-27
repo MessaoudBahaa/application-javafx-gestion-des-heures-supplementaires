@@ -1,0 +1,60 @@
+#creditHeuresV{
+    -fx-text-fill: #3cb721;
+}
+#creditHeuresR{
+    -fx-text-fill: #b71c1c;
+}
+
+
+#profileBox{
+
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 15, 0, 0, 0);
+    -fx-background-color: white;
+}
+#decompteButton{
+    -fx-background-color: #0d47a1;
+    -fx-text-fill: white;
+}
+
+#insertButton{
+    -fx-background-color: #0d47a1;
+    -fx-text-fill: white;
+}
+#decompteButton:hover{
+    -fx-background-color: white;
+    -fx-text-fill: #0d47a1;
+}
+.table-view{
+    -fx-background-color: transparent;
+}
+#drawerBox {
+    -fx-background-color: white;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 15, 0, 0, 0);
+}
+
+
+.tree-table-view:focused .tree-table-row-cell:selected .tree-table-cell{
+    -fx-text-fill: white;
+}
+.tree-table-view .column-header ,
+.tree-table-view .column-header-background,
+.tree-table-view .column-header-background .filler{
+    -fx-background-color:TRANSPARENT;
+}
+
+#employeTableV :selected{
+    -fx-background-color: limegreen;
+}
+
+#employeTableR :selected{
+    -fx-background-color: indianred;
+}
+
+#employeTableV{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+#employeTableR{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}

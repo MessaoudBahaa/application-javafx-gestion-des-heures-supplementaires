@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="dateRangeVbox" accessibleText="yess You made it " maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" stylesheets="@../Res/styles/homeStyle.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.HomeController">
+   <children>
+      <AnchorPane prefHeight="700.0" prefWidth="1200.0">
+         <children>
+            <JFXTreeTableView id="employeTableV" fx:id="employesTable" layoutX="543.0" layoutY="60.0" prefHeight="360.0" prefWidth="639.0" stylesheets="@../Res/styles/drawerStyle.css" />
+            <HBox alignment="CENTER" layoutX="574.0" prefHeight="60.0" prefWidth="541.0" spacing="10.0">
+               <children>
+                  <FontAwesomeIconView glyphName="SEARCH" size="20" strokeType="OUTSIDE" strokeWidth="0.0" />
+                  <JFXTextField fx:id="searchFeild" labelFloat="true" onKeyTyped="#search" prefHeight="29.0" prefWidth="457.0" promptText="Rechercher" />
+               </children>
+            </HBox>
+            <VBox layoutX="41.0" layoutY="430.0" prefHeight="263.0" prefWidth="1142.0">
+               <children>
+                  <JFXTabPane prefHeight="227.0" prefWidth="1114.0">
+                     <tabs>
+                        <Tab text="                        Heures Supplementaires             ">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox prefHeight="200.0" prefWidth="1142.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                                             <children>
+                                                <JFXDatePicker fx:id="supDate">
+                                                   <HBox.margin>
+                                                      <Insets right="20.0" />
+                                                   </HBox.margin>
+                                                </JFXDatePicker>
+                                                <JFXCheckBox fx:id="supDayCheck" text="Aujourd'hui">
+                                                   <HBox.margin>
+                                                      <Insets right="60.0" />
+                                                   </HBox.margin>
+                                                </JFXCheckBox>
+                                                <Label text="Entrez les heures supplementaires :" />
+                                                <JFXTextField fx:id="hsup50" labelFloat="true" prefWidth="50.0" promptText="50%" />
+                                                <JFXTextField fx:id="hsup75" labelFloat="true" layoutX="514.0" layoutY="48.0" prefWidth="50.0" promptText="75%" />
+                                                <JFXTextField fx:id="hsup100" labelFloat="true" layoutX="591.0" layoutY="48.0" prefWidth="50.0" promptText="100%">
+                                                   <HBox.margin>
+                                                      <Insets />
+                                                   </HBox.margin></JFXTextField>
+                                                <JFXTextField fx:id="hsuprepos" labelFloat="true" layoutX="814.0" layoutY="48.0" prefWidth="50.0" promptText="Repos" />
+                                                <JFXButton id="insertButton" fx:id="InsererButtonSup" contentDisplay="RIGHT" onAction="#ajouterSup" prefHeight="47.0" prefWidth="30.0" text=" ">
+                                                   <font>
+                                                      <Font size="1.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets left="60.0" />
+                                                   </HBox.margin>
+                                                   <graphic>
+                                                      <MaterialDesignIconView fill="WHITE" glyphName="ARROW_RIGHT" size="35" />
+                                                   </graphic>
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                </JFXButton>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                                             <children>
+                                                <JFXButton id="decompteButton" fx:id="etatButton" onAction="#genererEtatSup" prefHeight="44.0" prefWidth="123.0" text="Etat">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets right="50.0" />
+                                                   </HBox.margin>
+                                                </JFXButton>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children></AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab text="                   Heures Recuperation                                  ">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox prefHeight="200.0" prefWidth="1142.0">
+                                       <children>
+                                          <HBox fx:id="recuperationHBox" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                                             <children>
+                                                <JFXDatePicker fx:id="recupDate" />
+                                                <JFXCheckBox fx:id="recupDayCheck" text="Aujourd'hui">
+                                                   <HBox.margin>
+                                                      <Insets />
+                                                   </HBox.margin>
+                                                </JFXCheckBox>
+                                                <Label text="Entrez les heures de recuperation :" />
+                                                <JFXTextField fx:id="recDu" labelFloat="true" layoutX="591.0" layoutY="48.0" prefWidth="50.0" promptText="Du" />
+                                                <JFXTextField fx:id="recAu" labelFloat="true" prefWidth="50.0" promptText="Au">
+                                                   <HBox.margin>
+                                                      <Insets right="20.0" />
+                                                   </HBox.margin>
+                                                </JFXTextField>
+                                                <JFXCheckBox fx:id="recup816check" text="8-16" />
+                                                <JFXButton id="insertButton" fx:id="InsererButtonRec" contentDisplay="RIGHT" onAction="#ajouterRec" prefHeight="47.0" prefWidth="30.0" text=" ">
+                                                   <font>
+                                                      <Font size="1.0" />
+                                                   </font>
+                                                   <graphic>
+                                                      <MaterialDesignIconView fill="WHITE" glyphName="ARROW_RIGHT" size="35" />
+                                                   </graphic>
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <HBox.margin>
+                                                      <Insets left="60.0" />
+                                                   </HBox.margin>
+                                                </JFXButton>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                                             <children>
+                                                <JFXButton id="decompteButton" fx:id="etatButton1" onAction="#genererEtatRecu" prefHeight="44.0" prefWidth="123.0" text="Etat">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets right="50.0" />
+                                                   </HBox.margin>
+                                                </JFXButton>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children></AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab text="                        Heures à payer                   ">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox prefHeight="200.0" prefWidth="1142.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                                             <children>
+                                                <JFXDatePicker fx:id="payDate">
+                                                   <HBox.margin>
+                                                      <Insets right="20.0" />
+                                                   </HBox.margin>
+                                                </JFXDatePicker>
+                                                <JFXCheckBox fx:id="payMonthCheck" text="Mois courant">
+                                                   <HBox.margin>
+                                                      <Insets right="60.0" />
+                                                   </HBox.margin>
+                                                </JFXCheckBox>
+                                                <Label text="Entrez les heures à payer :" />
+                                                <JFXTextField fx:id="hpay50" labelFloat="true" prefWidth="50.0" promptText="50%" />
+                                                <JFXTextField fx:id="hpay75" labelFloat="true" layoutX="514.0" layoutY="48.0" prefWidth="50.0" promptText="75%" />
+                                                <JFXTextField fx:id="hpay100" labelFloat="true" layoutX="591.0" layoutY="48.0" prefWidth="50.0" promptText="100%" />
+                                                <JFXButton id="insertButton" fx:id="InsererButtonPay" contentDisplay="RIGHT" onAction="#ajouterPay" prefHeight="47.0" prefWidth="30.0" text=" ">
+                                                   <font>
+                                                      <Font size="1.0" />
+                                                   </font>
+                                                   <graphic>
+                                                      <MaterialDesignIconView fill="WHITE" glyphName="ARROW_RIGHT" size="35" />
+                                                   </graphic>
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <HBox.margin>
+                                                      <Insets left="60.0" />
+                                                   </HBox.margin>
+                                                </JFXButton>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                                             <children>
+                                                <JFXButton id="decompteButton" fx:id="etatButton2" onAction="#genererEtatPay" prefHeight="44.0" prefWidth="123.0" text="Etat">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets right="50.0" />
+                                                   </HBox.margin>
+                                                </JFXButton>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children></AnchorPane>
+                           </content>
+                        </Tab>
+                     </tabs>
+                  </JFXTabPane>
+               </children>
+            </VBox>
+            <VBox id="profileBox" alignment="TOP_CENTER" layoutX="42.0" layoutY="26.0" prefHeight="393.0" prefWidth="470.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="139.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../Res/images/avatarProfile.png" />
+                           </image>
+                        </ImageView>
+                        <VBox prefHeight="150.0" prefWidth="312.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="51.0" prefWidth="451.0" spacing="10.0">
+                                 <children>
+                                    <Label prefWidth="60.0" text="Matricule :" />
+                                    <Label id="matricule" fx:id="matriculeF" prefHeight="34.0" prefWidth="55.0">
+                                       <font>
+                                          <Font name="Consolas Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Credit :">
+                                       <HBox.margin>
+                                          <Insets left="20.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label id="creditHeuresV" fx:id="creditTotalLabel" text="0" textFill="#18eb10">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="51.0" prefWidth="451.0" spacing="10.0">
+                                 <children>
+                                    <Label prefWidth="60.0" text="Nom :" />
+                                    <Label fx:id="nomF" prefHeight="25.0" prefWidth="220.0" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="51.0" prefWidth="451.0" spacing="10.0">
+                                 <children>
+                                    <Label prefWidth="60.0" text="Prenom :" />
+                                    <Label fx:id="prenomF" prefHeight="25.0" prefWidth="220.0" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="51.0" prefWidth="451.0" spacing="10.0">
+                                 <children>
+                                    <Label prefWidth="90.0" text="Type d'emploi :" />
+                                    <Label fx:id="typeEmploiF" prefHeight="25.0" prefWidth="37.0" />
+                                    <Label layoutX="10.0" layoutY="21.0" prefWidth="70.0" text="Grille salaire:">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="grilleSalaireF" layoutX="110.0" layoutY="17.0" prefHeight="25.0" prefWidth="52.0" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="163.0" prefHeight="45.0" prefWidth="450.0" spacing="10.0">
+                     <children>
+                        <Label prefWidth="80.0" text="Poste :">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="posteF" prefHeight="25.0" prefWidth="349.0">
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="214.0" prefHeight="45.0" prefWidth="450.0" spacing="10.0">
+                     <children>
+                        <Label prefWidth="80.0" text="Direction :">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="directionF"  prefHeight="25.0" prefWidth="350.0">
+                           <font>
+                              <Font size="11.0" />
+                           </font></Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="204.0" prefHeight="45.0" prefWidth="450.0" spacing="10.0">
+                     <children>
+                        <Label prefWidth="80.0" text="Departement :">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="departementF"  prefHeight="25.0" prefWidth="350.0">
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="249.0" prefHeight="45.0" prefWidth="450.0" spacing="10.0">
+                     <children>
+                        <Label prefWidth="80.0" text="Service :">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="serviceF"  prefHeight="25.0" prefWidth="350.0">
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="294.0" prefHeight="45.0" prefWidth="450.0" spacing="10.0">
+                     <children>
+                        <Label prefWidth="80.0" text="Date d'entrée :">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="dateEntreeF"  prefHeight="25.0" prefWidth="100.0">
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                        <Label layoutX="20.0" layoutY="24.0" prefWidth="80.0" text=" :">
+                           <HBox.margin>
+                              <Insets left="40.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="categorieF"  layoutX="110.0" layoutY="20.0" prefHeight="25.0" prefWidth="110.0">
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <JFXHamburger fx:id="hamburger" layoutX="1148.0" layoutY="14.0" onMouseClicked="#drawerInOut" prefHeight="41.0" prefWidth="38.0" />
+      <JFXDrawer fx:id="drawer" defaultDrawerSize="190.0" prefHeight="700.0" prefWidth="110.0" style="-fx-background-color: transparent;" />
+      <JFXTabPane />
+   </children>
+</AnchorPane>

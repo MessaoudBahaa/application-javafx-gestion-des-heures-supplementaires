@@ -1,0 +1,14 @@
+JFXButton {
+
+    -fx-background-color: #0d47a1;
+    -fx-border-radius: 0;
+}
+#leftBox{
+    -fx-background-color: #0d47a1;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 15, 0, 0, 0);
+}
+
+#rightBox{
+    -fx-background-color: rgba(255, 255, 255, 0);
+
+}

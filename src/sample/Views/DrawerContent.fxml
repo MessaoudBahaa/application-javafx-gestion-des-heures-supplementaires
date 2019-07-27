@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox id="drawerBox" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="150.0" stylesheets="@../Res/styles/drawerStyle.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="106.0" fitWidth="166.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Res/images/logoWhite.png" />
+         </image>
+         <VBox.margin>
+            <Insets bottom="20.0" top="10.0" />
+         </VBox.margin>
+      </ImageView>
+      <VBox alignment="TOP_CENTER" prefHeight="167.0" prefWidth="190.0">
+         <children>
+            <MaterialDesignIconView fill="WHITE" glyphName="ACCOUNT_CIRCLE" size="130" />
+            <Label fx:id="UserLabel" text="Bienvenue " textFill="WHITE">
+               <font>
+                  <Font name="Microsoft Sans Serif" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <JFXButton id="parametreButton" accessibleText="home" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="111.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefHeight="80.0" prefWidth="157.0" text="Accueil       " textAlignment="CENTER" textFill="WHITE">
+         <graphic>
+            <MaterialDesignIconView fill="WHITE" glyphName="HOME_VARIANT" size="50" />
+         </graphic>
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton id="userButton" accessibleText="users" alignment="CENTER_RIGHT" contentDisplay="RIGHT" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefHeight="80.0" prefWidth="157.0" text="Utilisateurs  " textAlignment="CENTER" textFill="WHITE">
+         <graphic>
+            <MaterialDesignIconView fill="WHITE" glyphName="ACCOUNT_MULTIPLE_OUTLINE" size="50" />
+         </graphic>
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton id="parametreButton" accessibleText="param" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="425.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefHeight="80.0" prefWidth="157.0" text="Paramètres  " textAlignment="CENTER" textFill="WHITE">
+         <graphic>
+            <MaterialDesignIconView fill="WHITE" glyphName="SETTINGS" size="50" />
+         </graphic>
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton id="statButton" accessibleText="stat" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="470.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefHeight="80.0" prefWidth="157.0" text="Statistiques  " textAlignment="CENTER" textFill="WHITE">
+         <graphic>
+            <MaterialDesignIconView fill="WHITE" glyphName="CHART_BAR" size="50" />
+         </graphic>
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton id="deconnectButton" accessibleText="deconnect" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="271.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefHeight="80.0" prefWidth="157.0" text="Deconnecter" textAlignment="CENTER" textFill="WHITE">
+         <graphic>
+            <MaterialDesignIconView fill="WHITE" glyphName="ARROW_LEFT" size="50" />
+         </graphic>
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton id="exitButton" accessibleText="exit" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="351.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefHeight="80.0" prefWidth="157.0" text="Quitter        " textAlignment="CENTER">
+         <graphic>
+            <MaterialDesignIconView fill="WHITE" glyphName="POWER" size="50" />
+         </graphic>
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXButton>
+   </children>
+</VBox>
